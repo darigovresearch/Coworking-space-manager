@@ -5,7 +5,7 @@ App to help anyone make the most of coworking spaces of all kinds
 Organising and participating at coworking spaces can always be very difficult so we built a platform to streamline organisation and access.
 
 ## Solution
-A one stop platform for all your
+A one stop platform for all your coworking needs.
 
 ## Common use cases for this platform
 - Book seats/rooms
