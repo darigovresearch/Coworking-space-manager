@@ -3,7 +3,7 @@
   <!-- [Head] start -->
 
   <head>
-    <title>Login | Datta able Dashboard Template</title>
+    <title>Login | Coworking space manager</title>
     <!-- [Meta] -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
@@ -19,16 +19,16 @@
     <meta name="author" content="Codedthemes" />
 
     <!-- [Favicon] icon -->
-    <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon" />
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/x-icon" />
  <!-- [Font] Family -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <!-- [phosphor Icons] https://phosphoricons.com/ -->
-<link rel="stylesheet" href="../assets/fonts/phosphor/regular/style.css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='fonts/phosphor/regular/style.css') }}" />
 <!-- [Tabler Icons] https://tablericons.com -->
-<link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='fonts/tabler-icons.min.css') }}" />
 <!-- [Template CSS Files] -->
-<link rel="stylesheet" href="../assets/css/style.css" id="main-style-link" />
-<link rel="stylesheet" href="../assets/css/style-preset.css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" id="main-style-link" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style-preset.css') }}" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-14K1GBX9FG"></script>
 <script>
@@ -101,7 +101,12 @@
             <div class="card mb-0">
               <div class="card-body">
                 <div class="text-center">
-                  <a href="#"><img src="../assets/images/logo-dark.svg" alt="img" /></a>
+                  <!-- <a href="#"><img src="{{ url_for('static', filename='images/logo-dark.svg') }}" alt="img" /></a> -->
+                  <a href="{{ url_for('home') }}" class="b-brand h3 text-primary">
+                    <!-- ========   Change your logo from here   ============ -->
+                    <!-- <img src="{{ url_for('static', filename='images/logo-white.svg') }}" class="img-fluid logo-lg" alt="logo" /> -->
+                    <b>Coworking space manager</b>
+                  </a>
                 </div>
                 <h4 class="text-center f-w-500 mt-4 mb-3">Login</h4>
                 <div class="mb-3">
@@ -118,7 +123,7 @@
                   <h6 class="text-secondary f-w-400 mb-0">Forgot Password?</h6>
                 </div>
                 <div class="text-center mt-4">
-                  <button type="button" class="btn btn-primary shadow px-sm-4">Login</button>
+                  <a type="button" class="btn btn-primary shadow px-sm-4" href="{{ url_for('home') }}">Login</a>
                 </div>
                 <div class="d-flex justify-content-between align-items-end mt-4">
                   <h6 class="f-w-500 mb-0">Don't have an Account?</h6>
